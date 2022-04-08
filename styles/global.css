@@ -1,0 +1,632 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+html, body {
+    height: 100vh;
+    background-color: #eee;
+}
+
+.cabecalho {
+    background-color: #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0px 20px 0px;
+}
+
+.cabecalho-titulo {
+    font: normal 500 20px 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cabecalho-nav {
+    display: flex;
+    gap: 30px;
+    font-size: 16px;
+    margin-left: 400px;
+}
+
+.cabecalho-nav-link {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+.cabecalho-nav-link:hover {
+    color: rgb(56, 56, 56);
+    text-decoration: underline;
+}
+
+.busca {
+    border: 2px solid #bbb;
+    border-radius: 20px;
+    font-size: 16px;
+    height: 30px;
+    width: 200px;
+    padding: 10px;
+}
+
+.conteudo {
+    margin: 40px 0px;
+}
+
+.sessoes-1 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.sessoes-1 .sessao-1, .sessao-2, .sessao-3 {
+    background-color: white;
+    max-width: 300px;
+    height: 350px;
+    padding: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.sessoes-2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.sessoes-2 .sessao-1, .sessao-2, .sessao-3 {
+    background-color: white;
+    max-width: 300px;
+    height: 350px;
+    padding: 20px;
+    margin: 0px;
+    position: relative;
+}
+
+.subtitulo {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.sessao-texto {
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.btns {
+    cursor: pointer;
+    display: block;
+    background-color: #ddd;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 0px auto 0px auto;
+    width: 80%;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+}
+
+.btns:hover {
+    background-color: rgb(141, 141, 141);
+    color: white;
+}
+
+.rodape {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.rodape-texto {
+    padding: 20px;
+}
+
+/* Celulares Pequenos */
+@media (min-width: 200px) and (max-width: 365px) {
+    .cabecalho {
+        width: 100%;
+        margin-bottom: 1170px;
+    }
+
+    .conteudo {
+        position: absolute;
+        top: 60px;
+        right: 350px;
+    }
+
+    .sessoes-1, .sessoes-2 {
+        position: relative;
+        right: 0px;
+    }
+
+    .sessoes-1 .sessao-1, .sessao-2, .sessao-3 {
+        display: block;
+        position: relative;
+        height: 350px;
+        width: 250px;
+        left: 0px;
+        right: 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .sessoes-2 .sessao-1, .sessao-2, .sessao-3 {
+        display: block;
+        position: relative;
+        height: 350px;
+        width: 250px;
+        left: 0px;
+        right: 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .rodape {
+        text-align: center;
+    }
+}
+
+/* Celulares Pequenos */
+@media (min-width: 200px) and (max-width: 425px) {
+    .cabecalho {
+        width: 100%;
+    }
+
+    .sessoes-1, .sessoes-2 {
+        position: relative;
+        right: 30px;
+    }
+
+    .sessoes-1 .sessao-1, .sessao-2, .sessao-3 {
+        display: block;
+        position: relative;
+        height: 350px;
+        width: 250px;
+        left: 0px;
+        right: 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .sessoes-2 .sessao-1, .sessao-2, .sessao-3 {
+        display: block;
+        position: relative;
+        height: 350px;
+        width: 250px;
+        left: 0px;
+        right: 0px;
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+/* Celulares Médios a Grandes */
+@media (min-width: 300px) and (max-width: 661px) {
+    html, body {
+        height: 0vh;
+    }
+
+    .cabecalho {
+        background-color: #ddd;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 0px 20px 0px;
+        height: 70px;
+        position: relative;
+    }
+
+    .cabecalho-titulo {
+        position: absolute;
+        margin-left: 0px;
+    }
+
+    .cabecalho-nav {
+        display: none;
+        gap: 0px;
+        font-size: 0px;
+        margin-left: 0px;
+        margin-right: 100px;
+    }
+
+    .cabecalho-nav-link {
+        display: none;
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .busca {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 150px;
+    }
+
+    .conteudo {
+        height: 3500px;
+    }
+
+    .sessoes-1 .sessao-1, .sessao-2, .sessao-3 {
+        max-width: 300px;
+        position: relative;
+    }
+
+    .sessoes-2 .sessao-1, .sessao-2, .sessao-3 {
+        max-width: 300px;
+        position: relative;
+    }
+
+    .sessoes-1 > .sessao-1 {
+        position: absolute;
+        left: 200px;
+        right: 100px;
+        top: 0px;
+        margin: 0px auto;
+    }
+
+    .sessoes-1 > .sessao-2 {
+        display: block;
+        position: absolute;
+        left: 100px;
+        right: 100px;
+        top: 380px;
+        margin: 0px auto 300px auto;
+    }
+
+    .sessoes-1 > .sessao-3 {
+        display: none;
+        position: absolute;
+        left: 100px;
+        right: 100px;
+        top: 380px;
+        margin: 0px auto;
+    }
+
+    .sessoes-2 > .sessao-1 {
+        display: none;
+        position: absolute;
+        left: 100px;
+        right: 100px;
+        top: 760px;
+        margin: 0px auto;
+    }
+
+    .sessoes-2 > .sessao-2 {
+        display: block;
+        position: absolute;
+        left: 0px;
+        right: 100px;
+        top: 1760px;
+        margin: 0px auto;
+    }
+
+    .sessoes-2 > .sessao-3 {
+        display: none;
+        position: absolute;
+        left: 0px;
+        right: 100px;
+        top: 2160px;
+        margin: 0px auto;
+    }
+}
+
+/* Tela de Tamanho Pequeno */
+@media (min-width: 540px) and (max-width: 749px) {
+    html, body {
+        height: 0vh;
+    }
+
+    .cabecalho {
+        background-color: #ddd;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 0px 20px 0px;
+        position: relative;
+    }
+
+    .cabecalho-titulo {
+        margin-left: 0px;
+    }
+
+    .cabecalho-nav {
+        display: flex;
+        gap: 0px;
+        font-size: 0px;
+        margin-left: 0px;
+        margin-right: 100px;
+    }
+
+    .cabecalho-nav-link {
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .busca {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        max-width: 150px;
+    }
+
+    .conteudo {
+        height: 3500px;
+    }
+
+    .sessoes-1 .sessao-1, .sessao-2, .sessao-3 {
+        max-width: 300px;
+        position: relative;
+    }
+
+    .sessoes-2 .sessao-1, .sessao-2, .sessao-3 {
+        max-width: 300px;
+        position: relative;
+    }
+
+    .sessoes-1 > .sessao-1 {
+        position: absolute;
+        left: 200px;
+        right: 100px;
+        top: 0px;
+        margin: 0px auto;
+    }
+
+    .sessoes-1 > .sessao-2 {
+        display: block;
+        position: absolute;
+        left: 100px;
+        right: 100px;
+        top: 380px;
+        margin: 0px auto 300px auto;
+    }
+
+    .sessoes-1 > .sessao-3 {
+        display: none;
+        position: absolute;
+        left: 100px;
+        right: 100px;
+        top: 380px;
+        margin: 0px auto;
+    }
+
+    .sessoes-2 > .sessao-1 {
+        display: none;
+        position: absolute;
+        left: 100px;
+        right: 100px;
+        top: 760px;
+        margin: 0px auto;
+    }
+
+    .sessoes-2 > .sessao-2 {
+        display: block;
+        position: absolute;
+        left: 0px;
+        right: 100px;
+        top: 1760px;
+        margin: 0px auto;
+    }
+
+    .sessoes-2 > .sessao-3 {
+        display: none;
+        position: absolute;
+        left: 0px;
+        right: 100px;
+        top: 2160px;
+        margin: 0px auto;
+    }
+}
+
+/* Tela de Tamanho Pequeno/Médio */
+@media (min-width: 750px) and (max-width: 910px) {
+    html, body {
+        height: 0vh;
+    }
+
+    .cabecalho {
+        background-color: #ddd;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .cabecalho-nav {
+        display: flex;
+        gap: 0px;
+        font-size: 0px;
+        margin-left: 60px;
+    }
+
+    .cabecalho-nav-link {
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .busca {
+        max-width: 250px;
+    }
+
+    .conteudo {
+        height: 3500px;
+    }
+
+    .sessoes-1 .sessao-1, .sessao-2, .sessao-3 {
+        max-width: 300px;
+        position: relative;
+    }
+
+    .sessoes-2 .sessao-1, .sessao-2, .sessao-3 {
+        max-width: 300px;
+        position: relative;
+    }
+
+    .sessoes-1 > .sessao-1 {
+        position: absolute;
+        left: 200px;
+        right: 100px;
+        top: 0px;
+        margin: 0px auto;
+    }
+
+    .sessoes-1 > .sessao-2 {
+        display: block;
+        position: absolute;
+        left: 100px;
+        right: 100px;
+        top: 380px;
+        margin: 0px auto 300px auto;
+    }
+
+    .sessoes-1 > .sessao-3 {
+        display: none;
+        position: absolute;
+        left: 100px;
+        right: 100px;
+        top: 380px;
+        margin: 0px auto;
+    }
+
+    .sessoes-2 > .sessao-1 {
+        display: none;
+        position: absolute;
+        left: 100px;
+        right: 100px;
+        top: 760px;
+        margin: 0px auto;
+    }
+
+    .sessoes-2 > .sessao-2 {
+        display: block;
+        position: absolute;
+        left: 0px;
+        right: 100px;
+        top: 1760px;
+        margin: 0px auto;
+    }
+
+    .sessoes-2 > .sessao-3 {
+        display: none;
+        position: absolute;
+        left: 0px;
+        right: 100px;
+        top: 2160px;
+        margin: 0px auto;
+    }
+}
+
+/* Tela de Tamanho Médio */
+@media (max-width: 999px) {
+    html, body {
+        height: 0vh;
+    }
+
+    .cabecalho {
+        background-color: #ddd;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 50px 20px 50px;
+    }
+
+    .cabecalho-nav {
+        display: flex;
+        gap: 20px;
+        font-size: 14px;
+        margin-left: 0px;
+    }
+
+    .cabecalho-nav-link {
+        width: 160px;
+        margin-left: 30px;
+    }
+
+    .conteudo {
+        height: 1100px;
+    }
+
+    .sessoes-1 .sessao-1, .sessao-2, .sessao-3 {
+        max-width: 350px;
+    }
+
+    .sessoes-2 .sessao-1, .sessao-2, .sessao-3 {
+        max-width: 350px;
+    }
+
+    .sessoes-1 {
+        position: relative;
+    }
+    
+    .sessoes-1 > .sessao-1 {
+        position: absolute;
+        left: 100px;
+    }
+
+    .sessoes-1 > .sessao-2 {
+        position: absolute;
+        right: 100px;
+    }
+
+    .sessoes-1 > .sessao-3 {
+        position: absolute;
+        left: 100px;
+        top: 380px;
+    }
+
+    .sessoes-2 > .sessao-1 {
+        position: absolute;
+        right: 100px;
+        top: 380px;
+    }
+
+    .sessoes-2 > .sessao-2 {
+        position: absolute;
+        left: 100px;
+        top: 760px;
+    }
+
+    .sessoes-2 > .sessao-3 {
+        position: absolute;
+        right: 100px;
+        top: 760px;
+    }
+}
+
+/* Tela de Tamanho Grande */
+
+@media (min-width: 1000px) and (max-width: 1080px) {
+    .cabecalho {
+        background-color: #ddd;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 100px 20px 100px;
+    }
+
+    .cabecalho-nav {
+        display: flex;
+        gap: 30px;
+        font-size: 16px;
+        margin-left: 150px;
+    }
+}
